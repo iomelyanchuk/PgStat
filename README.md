@@ -1,2 +1,2 @@
 # PgStat
-Tool to get base statistocs from PostgreSQL DB
+Tool to get base statistics from PostgreSQL DB
