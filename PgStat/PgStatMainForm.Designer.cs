@@ -43,6 +43,8 @@
             this.GetResultButton = new System.Windows.Forms.Button();
             this.QueriesComboBox = new System.Windows.Forms.ComboBox();
             this.QueriesDataSet = new System.Data.DataSet();
+            this.DbLabel = new System.Windows.Forms.Label();
+            this.DbTextBox = new System.Windows.Forms.TextBox();
             this.ConnectGroupBox.SuspendLayout();
             this.ResultsGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ResultDataGridView)).BeginInit();
@@ -53,6 +55,8 @@
             // 
             this.ConnectGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.ConnectGroupBox.Controls.Add(this.DbTextBox);
+            this.ConnectGroupBox.Controls.Add(this.DbLabel);
             this.ConnectGroupBox.Controls.Add(this.ConnectButton);
             this.ConnectGroupBox.Controls.Add(this.PasswordTextBox);
             this.ConnectGroupBox.Controls.Add(this.PasswordLabel);
@@ -64,7 +68,7 @@
             this.ConnectGroupBox.Controls.Add(this.ServerLabel);
             this.ConnectGroupBox.Location = new System.Drawing.Point(12, 12);
             this.ConnectGroupBox.Name = "ConnectGroupBox";
-            this.ConnectGroupBox.Size = new System.Drawing.Size(760, 88);
+            this.ConnectGroupBox.Size = new System.Drawing.Size(675, 88);
             this.ConnectGroupBox.TabIndex = 0;
             this.ConnectGroupBox.TabStop = false;
             this.ConnectGroupBox.Text = "Подключение";
@@ -72,7 +76,7 @@
             // ConnectButton
             // 
             this.ConnectButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ConnectButton.Location = new System.Drawing.Point(640, 24);
+            this.ConnectButton.Location = new System.Drawing.Point(555, 24);
             this.ConnectButton.Name = "ConnectButton";
             this.ConnectButton.Size = new System.Drawing.Size(114, 23);
             this.ConnectButton.TabIndex = 8;
@@ -82,7 +86,7 @@
             // 
             // PasswordTextBox
             // 
-            this.PasswordTextBox.Location = new System.Drawing.Point(284, 50);
+            this.PasswordTextBox.Location = new System.Drawing.Point(255, 58);
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.PasswordChar = '*';
             this.PasswordTextBox.Size = new System.Drawing.Size(100, 20);
@@ -91,7 +95,7 @@
             // PasswordLabel
             // 
             this.PasswordLabel.AutoSize = true;
-            this.PasswordLabel.Location = new System.Drawing.Point(195, 53);
+            this.PasswordLabel.Location = new System.Drawing.Point(201, 61);
             this.PasswordLabel.Name = "PasswordLabel";
             this.PasswordLabel.Size = new System.Drawing.Size(48, 13);
             this.PasswordLabel.TabIndex = 6;
@@ -99,7 +103,7 @@
             // 
             // UsernameTextBox
             // 
-            this.UsernameTextBox.Location = new System.Drawing.Point(284, 26);
+            this.UsernameTextBox.Location = new System.Drawing.Point(95, 58);
             this.UsernameTextBox.Name = "UsernameTextBox";
             this.UsernameTextBox.Size = new System.Drawing.Size(100, 20);
             this.UsernameTextBox.TabIndex = 5;
@@ -107,7 +111,7 @@
             // UsernameLabel
             // 
             this.UsernameLabel.AutoSize = true;
-            this.UsernameLabel.Location = new System.Drawing.Point(195, 29);
+            this.UsernameLabel.Location = new System.Drawing.Point(6, 61);
             this.UsernameLabel.Name = "UsernameLabel";
             this.UsernameLabel.Size = new System.Drawing.Size(83, 13);
             this.UsernameLabel.TabIndex = 4;
@@ -115,7 +119,7 @@
             // 
             // PortTextBox
             // 
-            this.PortTextBox.Location = new System.Drawing.Point(59, 50);
+            this.PortTextBox.Location = new System.Drawing.Point(423, 26);
             this.PortTextBox.Name = "PortTextBox";
             this.PortTextBox.Size = new System.Drawing.Size(100, 20);
             this.PortTextBox.TabIndex = 3;
@@ -124,7 +128,7 @@
             // PortLabel
             // 
             this.PortLabel.AutoSize = true;
-            this.PortLabel.Location = new System.Drawing.Point(6, 53);
+            this.PortLabel.Location = new System.Drawing.Point(382, 29);
             this.PortLabel.Name = "PortLabel";
             this.PortLabel.Size = new System.Drawing.Size(35, 13);
             this.PortLabel.TabIndex = 2;
@@ -134,7 +138,7 @@
             // 
             this.ServerTextBox.Location = new System.Drawing.Point(59, 26);
             this.ServerTextBox.Name = "ServerTextBox";
-            this.ServerTextBox.Size = new System.Drawing.Size(100, 20);
+            this.ServerTextBox.Size = new System.Drawing.Size(136, 20);
             this.ServerTextBox.TabIndex = 1;
             // 
             // ServerLabel
@@ -157,7 +161,7 @@
             this.ResultsGroupBox.Enabled = false;
             this.ResultsGroupBox.Location = new System.Drawing.Point(12, 106);
             this.ResultsGroupBox.Name = "ResultsGroupBox";
-            this.ResultsGroupBox.Size = new System.Drawing.Size(760, 344);
+            this.ResultsGroupBox.Size = new System.Drawing.Size(675, 274);
             this.ResultsGroupBox.TabIndex = 1;
             this.ResultsGroupBox.TabStop = false;
             this.ResultsGroupBox.Text = "Результаты";
@@ -175,13 +179,13 @@
             this.ResultDataGridView.Name = "ResultDataGridView";
             this.ResultDataGridView.ReadOnly = true;
             this.ResultDataGridView.RowHeadersVisible = false;
-            this.ResultDataGridView.Size = new System.Drawing.Size(745, 292);
+            this.ResultDataGridView.Size = new System.Drawing.Size(660, 222);
             this.ResultDataGridView.TabIndex = 2;
             // 
             // GetResultButton
             // 
             this.GetResultButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.GetResultButton.Location = new System.Drawing.Point(640, 17);
+            this.GetResultButton.Location = new System.Drawing.Point(555, 17);
             this.GetResultButton.Name = "GetResultButton";
             this.GetResultButton.Size = new System.Drawing.Size(114, 23);
             this.GetResultButton.TabIndex = 1;
@@ -197,20 +201,38 @@
             this.QueriesComboBox.FormattingEnabled = true;
             this.QueriesComboBox.Location = new System.Drawing.Point(9, 19);
             this.QueriesComboBox.Name = "QueriesComboBox";
-            this.QueriesComboBox.Size = new System.Drawing.Size(625, 21);
+            this.QueriesComboBox.Size = new System.Drawing.Size(540, 21);
             this.QueriesComboBox.TabIndex = 0;
             // 
             // QueriesDataSet
             // 
             this.QueriesDataSet.DataSetName = "QueriesDataSet";
             // 
+            // DbLabel
+            // 
+            this.DbLabel.AutoSize = true;
+            this.DbLabel.Location = new System.Drawing.Point(223, 29);
+            this.DbLabel.Name = "DbLabel";
+            this.DbLabel.Size = new System.Drawing.Size(26, 13);
+            this.DbLabel.TabIndex = 9;
+            this.DbLabel.Text = "БД:";
+            // 
+            // DbTextBox
+            // 
+            this.DbTextBox.Location = new System.Drawing.Point(255, 26);
+            this.DbTextBox.Name = "DbTextBox";
+            this.DbTextBox.Size = new System.Drawing.Size(100, 20);
+            this.DbTextBox.TabIndex = 10;
+            this.DbTextBox.Text = "postgres";
+            // 
             // PgStatMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 462);
+            this.ClientSize = new System.Drawing.Size(699, 392);
             this.Controls.Add(this.ResultsGroupBox);
             this.Controls.Add(this.ConnectGroupBox);
+            this.MinimumSize = new System.Drawing.Size(715, 430);
             this.Name = "PgStatMainForm";
             this.Text = "PgStat";
             this.ConnectGroupBox.ResumeLayout(false);
@@ -239,6 +261,8 @@
         private System.Windows.Forms.Button GetResultButton;
         private System.Windows.Forms.ComboBox QueriesComboBox;
         private System.Data.DataSet QueriesDataSet;
+        private System.Windows.Forms.TextBox DbTextBox;
+        private System.Windows.Forms.Label DbLabel;
     }
 }
 

@@ -48,7 +48,7 @@ namespace PgStat
 
         private void ConnectDb()
         {
-            _pgWorker = new PgWorker(ServerTextBox.Text, PortTextBox.Text, UsernameTextBox.Text, PasswordTextBox.Text);
+            _pgWorker = new PgWorker(ServerTextBox.Text, PortTextBox.Text, UsernameTextBox.Text, PasswordTextBox.Text, DbTextBox.Text);
             if (!_pgWorker.IsConnected) return;
             ConnectButton.Text = "Отключить";
             ResultsGroupBox.Enabled = true;
